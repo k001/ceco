@@ -1,0 +1,26 @@
+.cm-s-dark { font-size:12px; }	/* - customized editor font - */
+.cm-s-dark { background: #111; color: #999;}
+
+.cm-s-dark span.cm-keyword {color: #8d0081;}
+.cm-s-dark span.cm-atom {color: #e65100;}
+.cm-s-dark span.cm-number {color: #df9e00;}
+.cm-s-dark span.cm-def {color: #00f;}
+.cm-s-dark span.cm-variable {color: #df0060;}
+.cm-s-dark span.cm-variable-2 {color: #05a;}
+.cm-s-dark span.cm-variable-3 {color: #085;}
+.cm-s-dark span.cm-property {color: #1b1b1b;}
+.cm-s-dark span.cm-operator {color: #000000;}
+.cm-s-dark span.cm-comment {color: #666; font-weight: bold;
+}
+.cm-s-dark span.cm-string {color: #a100ce;}
+.cm-s-dark span.cm-string-2 {color: #f50;}
+.cm-s-dark span.cm-meta {color: #555;}
+.cm-s-dark span.cm-error {color: #f00;}
+.cm-s-dark span.cm-qualifier {color: #555;}
+.cm-s-dark span.cm-builtin {color: #30a;}
+.cm-s-dark span.cm-bracket {color: #cc7;}
+.cm-s-dark span.cm-tag {color: #0d9cff;}
+.cm-s-dark span.cm-attribute {color: #00c;}
+.cm-s-dark .CodeMirror-gutter { background: #191919; border-right: 1px solid #333; min-width:2.4em; }
+.cm-s-dark .CodeMirror-gutter-text { color: #444; padding-right: 6px; }
+

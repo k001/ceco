@@ -1,0 +1,10 @@
+2015-10-16 08:28:54 Error: Fatal Error (1): Call to undefined method View::html() in [C:\servidor\apache\htdocs\www\ceco\app\View\Elements\dashboard\east.ctp, line 16]
+2015-10-16 08:28:54 Error: [FatalErrorException] Call to undefined method View::html()
+Request URL: /ceco/dashboards/sbm
+Stack Trace:
+#0 C:\servidor\apache\htdocs\www\ceco\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\servidor\apa...', 16)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\servidor\apa...', 16, Array)
+#2 C:\servidor\apache\htdocs\www\ceco\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\servidor\apa...', 16, Array)
+#3 C:\servidor\apache\htdocs\www\ceco\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
