@@ -145,23 +145,23 @@ $json .= ']';
 </style>
 
 
-<!--para exportar-->
+
 <?php echo $this->html->css('dashboard/sbm/exportar_excel'); ?>
 
     <script>
-    $("#btnExport").click(function(e) {
-        window.open('data:application/vnd.ms-excel,' + encodeURIComponent($('#dvData').html()));
-        e.preventDefault();
-    });
-    
-    $('#mostrar_padron').click(function(e){
-        window.location.href = '?padron_id='+$('#select_padron').val()+'&usardirecciones='+ $("input[name='usardirecciones']:checked").val();
-        e.preventDefault();
-    });
-    
-    //iniciar mapa
-    google.maps.event.addDomListener(window, 'load', initialize);
+        $("#btnExport").click(function(e) {
+            window.open('data:application/vnd.ms-excel,' + encodeURIComponent($('#dvData').html()));
+            e.preventDefault();
+        });
+        
+        $('#mostrar_padron').click(function(e){
+            window.location.href = '?padron_id='+$('#select_padron').val()+'&usardirecciones='+ $("input[name='usardirecciones']:checked").val();
+            e.preventDefault();
+        });
+        
+        //iniciar mapa
+        
     </script>
-<!--fin exportar a excel-->
+
 
 
