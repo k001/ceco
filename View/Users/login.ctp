@@ -1,4 +1,3 @@
-<?php echo phpinfo(); ?>
 <div style="background-color: #FFD844;"> <?php echo $this->Session->flash('auth'); ?></div>
 
 <div id="outer-wrapper">
