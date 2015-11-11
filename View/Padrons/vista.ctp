@@ -132,7 +132,7 @@ echo $this->Html->script('../importar_padron/js/bootstrap.min.js');
                                             <?php } ?>
                                         </tr>
                                     </table>
-                                    <h2>cantidad: <?= $cuantos; ?></h2>
+                                    <h2>cantidad: <?= $cuantos ; ?></h2>
                                     <hr>
                                     
                                     <input type="hidden" name="filas" id="filas" value="<?= $cuantos; ?>">

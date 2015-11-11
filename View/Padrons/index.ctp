@@ -26,6 +26,7 @@
                                         <th>Descripcion</th>
                                         <th>Cantidad de Registros</th>
                                         <th>Editar</th>
+                                        <th>Eliminar</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -36,7 +37,10 @@
                                             <td><?php echo $value['IndexPad']['nombre']; ?></td>
                                             <td><?php echo $value['IndexPad']['descripcion']; ?></td>
                                             <td><?php echo $value['IndexPad']['cant_registros']; ?></td>
-                                            <td class="center"><?php echo $this->Html->link('Ver / Editar',array('controller' => 'padrons', 'action' => 'edit', $value['IndexPad']['id']), array('escape' => FALSE, 'class'=>'btn small-btn')); ?> </td>
+                                            <td class="center"><?php echo $this->Html->link('Ver / Editar',array('controller' => 'padrons', 'action' => 'edit', '?id_padron='.$value['IndexPad']['id']), array('escape' => FALSE, 'class'=>'btn ')); ?> </td>
+                                            <?php if ($value['IndexPad']['id'] <> 1){?>
+                                                <td class="center"><?php echo $this->Html->link('<i class="icon-trash"> Eliminar</i>',array('controller' => 'padrons', 'action' => 'delete_padron','?idpad='. $value['IndexPad']['id']), array('escape' => FALSE, 'class'=>'btn red-btn', 'onclick'=>'return confirm_delete()')); ?> </td>
+                                            <?php }else{echo '<td class="center">---</td>';} ?>
                                         </tr>   
                                     <?php } ?>
                                 </tbody>
@@ -47,6 +51,7 @@
                                         <th>Descripcion</th>
                                         <th>Cantidad de Registros</th>
                                         <th>Editar</th>
+                                        <th>Eliminar</th>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -61,3 +66,11 @@
         </div>
     </div>
 </div>   
+
+
+
+<script type="text/javascript">
+function confirm_delete() {
+  return confirm('Esta seguro de eliminar el Padron?');
+}
+</script>

@@ -18,14 +18,9 @@
                         </div>-->
                         </h2>
                         <div class="dashWidget">
-
-
                             <?php
-                            
                             require_once("/importar_padron/db.php");
-                            
                             $db = new DB();
-                            
                             function _multiple_busqueda($needle, $haystack)
                             {
                                 if(is_array($haystack))
@@ -47,25 +42,20 @@
                                     return FALSE;
                                 }
                             }
-                            
-                            
                             //**************************** Inserto los index y demas **//////////////////////////////////////
-                            
+                            $tabla_guardar = $_POST['tablas'][0];//elijo como tabla a guardar en el indexpad la primer seleccion de tabla en el cliente (si guardase datos en 2 o mas tablas diferentes seria inconsistente el indexpad ya que este soporta solo una tabla)
                             if(isset($_POST['nombre_indexpad']) && (isset($_POST['descripcion_indexpad']))){
                                 $nombre_indexpad = $_POST['nombre_indexpad'];
                                 $descripcion_indexpad = $_POST['descripcion_indexpad'];
                                 $admin_id = $this->Session->read('Auth.User.id');
                                 $cantidad_registros = $_POST['filas'];
                                 
-                                $sql_indexpad = "insert into indexpad (admin_id, created, nombre, descripcion, cant_registros, tabla) VALUES ('$admin_id', NOW(), '$nombre_indexpad', '$descripcion_indexpad', $cantidad_registros, 'pruebas' )";
+                                $sql_indexpad = "insert into indexpad (admin_id, created, nombre, descripcion, cant_registros, tabla) VALUES ('$admin_id', NOW(), '$nombre_indexpad', '$descripcion_indexpad', $cantidad_registros, '$tabla_guardar' )";
                                 $db->execute($sql_indexpad);
                                 
                                 $indexpad_id = $db->getInsertId();
                                 
                             }
-                            
-                    
-
 
                             $tablas = $_POST['tablas'];
                             $labels = $_POST['labels'];
@@ -182,12 +172,6 @@
                                   <a class="close" data-dismiss="alert">&times;</a>
                                   <strong>Padron importado Correctamente!</strong> Ahora puede seleccionarlo para mostrar en el mapa.
                                 </div>
-                            
-                            
-                            
-                            
-                            
-                            
                         </div>
                     </div>
                 </div>
