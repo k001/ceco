@@ -1,6 +1,6 @@
 <?php
 
-    require_once("/importar_padron/db.php");
+    require_once("importar_padron/db.php");
     $db = new DB();
 
     $tabla = addslashes(trim($_GET['t']));

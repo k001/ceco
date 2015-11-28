@@ -5,11 +5,11 @@
 // Definiendo el Host
 define("DB_HOST", "localhost");
 // Usuario
-define("DB_USER", "root");
+define("DB_USER", "geoceco_geouser");
 // Password
-define("DB_PASS", "matrix");
+define("DB_PASS", "M@stercd3379");
 // Nombre de la base de datos
-define("DB_NAME", "geoceco");
+define("DB_NAME", "geoceco_geoceco");
 
 
 class DB extends mysqli {

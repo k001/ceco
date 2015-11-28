@@ -19,7 +19,7 @@
                         </h2>
                         <div class="dashWidget">
                             <?php
-                            require_once("/importar_padron/db.php");
+                            require_once("importar_padron/db.php");
                             $db = new DB();
                             function _multiple_busqueda($needle, $haystack)
                             {

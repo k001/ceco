@@ -1,12 +1,10 @@
-<?php
-    require_once("/importar_padron/db.php");
+﻿<?php
+    require_once("importar_padron/db.php");
     $db = new DB();
 
     $sql = "SHOW TABLES";
     $tables = $db->execute($sql);
-
     $object = "Tables_in_".DB_NAME;
-
     while($row = $tables->fetch_object()){
         $rows[] = $row->$object;
     }
